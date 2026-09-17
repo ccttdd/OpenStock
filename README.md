@@ -45,15 +45,16 @@ Note: OpenStock is community-built and not a brokerage. Market data may be delay
 4. 🔋 [Features](#features)
 5. 🤸 [Quick Start](#quick-start)
 6. 🐳 [Docker Setup](#docker-setup)
-7. 🔐 [Environment Variables](#environment-variables)
-8. 🧱 [Project Structure](#project-structure)
-9. 📡 [Data & Integrations](#data--integrations)
-10. 🌍 [Market Support](#market-support)
-11. 🧪 [Scripts & Tooling](#scripts--tooling)
-12. 🤝 [Contributing](#contributing)
-13. 🛡️ [Security](#security)
-14. 📜 [License](#license)
-15. 🙏 [Acknowledgements](#acknowledgements)
+7. 🖥️ [macOS Desktop Launcher](#macos-desktop-launcher)
+8. 🔐 [Environment Variables](#environment-variables)
+9. 🧱 [Project Structure](#project-structure)
+10. 📡 [Data & Integrations](#data--integrations)
+11. 🌍 [Market Support](#market-support)
+12. 🧪 [Scripts & Tooling](#scripts--tooling)
+13. 🤝 [Contributing](#contributing)
+14. 🛡️ [Security](#security)
+15. 📜 [License](#license)
+16. 🙏 [Acknowledgements](#acknowledgements)
 
 ## ✨ Introduction <a name="introduction"></a>
 
@@ -230,6 +231,22 @@ services:
 volumes:
   mongo-data:
 ```
+
+## 🖥️ macOS Desktop Launcher <a name="macos-desktop-launcher"></a>
+
+Prefer a real app over a browser tab? `desktop/macos` contains a small
+native Swift + WKWebView wrapper: no address bar, and the menu bar shows
+"OpenStock" instead of your browser. It auto-starts `pnpm start` if the
+server isn't already running, then opens the app window.
+
+```bash
+cd desktop/macos
+./build.sh
+open OpenStock.app          # or copy it into /Applications and add to the Dock
+```
+
+See [desktop/macos/README.md](desktop/macos/README.md) for details, including
+how the bundled icon was generated.
 
 ## 🔐 Environment Variables <a name="environment-variables"></a>
 
